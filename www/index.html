@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<!--
+    Licensed to the Apache Software Foundation (ASF) under one
+    or more contributor license agreements.  See the NOTICE file
+    distributed with this work for additional information
+    regarding copyright ownership.  The ASF licenses this file
+    to you under the Apache License, Version 2.0 (the
+    "License"); you may not use this file except in compliance
+    with the License.  You may obtain a copy of the License at
+
+    http://www.apache.org/licenses/LICENSE-2.0
+
+    Unless required by applicable law or agreed to in writing,
+    software distributed under the License is distributed on an
+    "AS IS" BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY
+     KIND, either express or implied.  See the License for the
+    specific language governing permissions and limitations
+    under the License.
+-->
+<html>
+    <head>
+        <!--
+        Customize this policy to fit your own app's needs. For more guidance, see:
+            https://github.com/apache/cordova-plugin-whitelist/blob/master/README.md#content-security-policy
+        Some notes:
+            * gap: is required only on iOS (when using UIWebView) and is needed for JS->native communication
+            * https://ssl.gstatic.com is required only on Android and is needed for TalkBack to function properly
+            * Disables use of inline scripts in order to mitigate risk of XSS vulnerabilities. To change this:
+                * Enable inline JS: add 'unsafe-inline' to default-src
+        -->
+        <meta http-equiv="Content-Security-Policy" content="default-src 'self' data: gap: https://ssl.gstatic.com 'unsafe-eval'; style-src 'self' 'unsafe-inline'; media-src *; img-src 'self' data: content:;">
+        <meta name="format-detection" content="telephone=no">
+        <meta name="msapplication-tap-highlight" content="no">
+        <meta name="viewport" content="initial-scale=1, width=device-width, viewport-fit=cover">
+        <link rel="stylesheet" type="text/css" href="css/index.css">
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+        <title>Hello World</title>
+        <style>
+            #wrap{
+        background-color:aquamarine;
+        
+           text-align: center; }
+        </style>
+    </head>
+    <body>
+        <div style="color: rgb(192, 61, 61);background-color:darkslategrey ;text-align: center; ">
+        <h1>問卷調查的啦</h1>
+        <div id="wrap" >
+            <br>
+        <form>
+           
+            <div class="form-group">
+                <h3>姓名: <input type="text" class="form-control"></h3>
+                
+            </form>
+            </div>
+
+            <div class="form-group">
+                <h3>email: <input type="email" class="form-control"></h3>
+                
+            </form>
+            </div>
+            <h3>您從哪裡得知我們呢?</h3>
+            <select class="form-control form-control-sm">
+                    <option>我不知道</option>
+                    <option>我真的不知道</option>
+                    <option>你覺得呢?</option>
+                    <option>你猜阿?</option>
+            </select>
+
+            <h3>是否再度光臨:</h3>
+                    <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio1" value="option1">
+                    <label class="form-check-label" for="inlineRadio1">會</label>
+                  
+                    <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio2" value="option2">
+                    <label class="form-check-label" for="inlineRadio2">一定會</label>
+                  
+                    <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio3" value="option3" disabled>
+                    <label class="form-check-label" for="inlineRadio3">可能不會</label>
+
+                    <h3>寶貴意見:</h3>
+                    <textarea name="testarea" cols="40" rows="5"></textarea>
+                    <div class="form-check">
+                    <input class="form-check-input position-static" type="checkbox" id="blankCheckbox" value="option1" aria-label="...">勾我霸拖
+                    <h3>您的服務滿意程度?<input type="text" class="form-control"></h3>
+                    <button id="submit">送出</button>
+                    </div>
+
+              </div>
+              <img src="img/banana.jpg">
+            </div>
+        <script type="text/javascript" src="cordova.js"></script>
+        <script type="text/javascript" src="js/index.js"></script>
+    </body>
+</html>
